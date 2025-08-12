@@ -2,7 +2,7 @@
   "name": "Campfire Songs",
   "short_name": "Campfire",
   "description": "A collection of campfire songs with chords for guitar players",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#e74c3c",

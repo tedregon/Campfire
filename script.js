@@ -3,17 +3,13 @@ const songModal = document.getElementById('songModal');
 const modalClose = document.getElementById('modalClose');
 const modalTitle = document.getElementById('modalTitle');
 const modalArtist = document.getElementById('modalArtist');
-const modalKey = document.getElementById('modalKey');
 const modalChords = document.getElementById('modalChords');
-const modalLyrics = document.getElementById('modalLyrics');
 
 // Modal functionality
 function openModal(song) {
     modalTitle.textContent = song.title;
     modalArtist.textContent = song.artist;
-    modalKey.textContent = `Key: ${song.key}`;
     modalChords.textContent = song.chords;
-    modalLyrics.textContent = song.lyrics;
     songModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -44,7 +40,6 @@ function createSongCard(song) {
     card.innerHTML = `
         <div class="song-title">${song.title}</div>
         <div class="song-artist">${song.artist}</div>
-        <div class="song-key">${song.key}</div>
         <div class="song-preview">${song.lyrics.split('\n')[0]}...</div>
     `;
     card.addEventListener('click', () => openModal(song));
@@ -56,23 +51,7 @@ function loadSongs() {
     // Check which page we're on and load appropriate songs
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
-    if (currentPage === 'index.html') {
-        // All songs section - combine all songs
-        const allSongsContainer = document.getElementById('allSongs');
-        if (allSongsContainer) {
-            const allSongs = [
-                ...thursdaySongs,
-                ...fridaySongs,
-                ...saturdaySongs,
-                ...sundaySongs,
-                ...kidsSongs
-            ];
-            
-            allSongs.forEach(song => {
-                allSongsContainer.appendChild(createSongCard(song));
-            });
-        }
-    } else if (currentPage === 'thursday.html') {
+    if (currentPage === 'thursday.html') {
         // Thursday songs
         const thursdayContainer = document.getElementById('thursdaySongs');
         if (thursdayContainer) {

@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thursday Songs - Campfire Songs</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="A collection of campfire songs with chords for guitar players">
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Campfire Songs">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-192x192.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,7 +29,7 @@
         <div class="container">
             <nav class="nav">
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">All Songs</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="thursday.html" class="nav-link active">Thursday</a></li>
                     <li><a href="friday.html" class="nav-link">Friday</a></li>
                     <li><a href="saturday.html" class="nav-link">Saturday</a></li>
@@ -28,9 +44,6 @@
         <!-- Thursday Songs -->
         <section class="songs-section">
             <div class="container">
-                <div class="section-header">
-                    <h2>Thursday Songs</h2>
-                </div>
                 <div class="songs-grid" id="thursdaySongs">
                     <!-- Thursday songs will be loaded here -->
                 </div>
@@ -42,42 +55,43 @@
     <div class="modal" id="songModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="modalTitle"></h3>
+                <div class="modal-title-section">
+                    <h3 id="modalTitle"></h3>
+                    <div class="artist" id="modalArtist"></div>
+                </div>
                 <button class="modal-close" id="modalClose">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="song-info">
-                    <div class="song-meta">
-                        <span class="artist" id="modalArtist"></span>
-                        <span class="key" id="modalKey"></span>
-                    </div>
-                </div>
                 <div class="song-content">
                     <div class="chords-section">
-                        <h4>Chords</h4>
                         <div class="chords" id="modalChords"></div>
-                    </div>
-                    <div class="lyrics-section">
-                        <h4>Lyrics</h4>
-                        <div class="lyrics" id="modalLyrics"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Campfire Songs. Made with <i class="fas fa-heart"></i> for music lovers.</p>
-        </div>
-    </footer>
-
     <!-- Song data files -->
     <script src="thursday.js"></script>
     
     <!-- Main application script -->
     <script src="script.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>

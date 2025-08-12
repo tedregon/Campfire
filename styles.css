@@ -87,6 +87,53 @@ body {
     display: none;
 }
 
+/* Home Section */
+.home-section {
+    padding: 100px 0 60px;
+    background: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Days Grid */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.day-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #e74c3c;
+}
+
+.day-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.day-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 /* Songs Section */
 .songs-section {
     padding: 100px 0 60px;
@@ -96,24 +143,11 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
 /* Songs Grid */
 .songs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
 }
 
 .song-card {
@@ -181,15 +215,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
 }
 
 .modal-content {
     background: white;
-    border-radius: 15px;
-    max-width: 800px;
     width: 100%;
-    max-height: 90vh;
+    height: 100vh;
     overflow-y: auto;
     position: relative;
 }
@@ -197,13 +228,20 @@ body {
 .modal-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 1.5rem;
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
     background: white;
-    border-radius: 15px 15px 0 0;
+}
+
+.modal-title-section {
+    flex: 1;
+}
+
+.modal-title-section h3 {
+    margin-bottom: 0.5rem;
 }
 
 .modal-header h3 {
@@ -244,8 +282,6 @@ body {
 }
 
 .artist, .key {
-    background: #f8f9fa;
-    padding: 0.5rem 1rem;
     border-radius: 15px;
     font-size: 0.9rem;
     color: #666;
@@ -264,8 +300,6 @@ body {
 }
 
 .chords-section, .lyrics-section {
-    background: #f8f9fa;
-    padding: 1.5rem;
     border-radius: 10px;
 }
 
@@ -298,27 +332,14 @@ body {
     white-space: pre-wrap;
 }
 
-/* Footer */
-.footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
-}
-
-.footer i {
-    color: #e74c3c;
-}
-
 /* Responsive Design */
 @media (min-width: 768px) {
     .nav-menu {
         gap: 2rem;
     }
     
-    .section-header h2 {
-        font-size: 2.5rem;
+    .days-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
     
     .songs-grid {
@@ -331,6 +352,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+    .days-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
     .songs-grid {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }

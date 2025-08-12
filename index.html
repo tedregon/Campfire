@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campfire Songs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">All Songs</a></li>
+                    <li><a href="thursday.html" class="nav-link">Thursday</a></li>
+                    <li><a href="friday.html" class="nav-link">Friday</a></li>
+                    <li><a href="saturday.html" class="nav-link">Saturday</a></li>
+                    <li><a href="sunday.html" class="nav-link">Sunday</a></li>
+                    <li><a href="kids.html" class="nav-link">Kids</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- All Songs Section -->
+        <section class="songs-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>All Songs</h2>
+                </div>
+                <div class="songs-grid" id="allSongs">
+                    <!-- All songs will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Song Modal -->
+    <div class="modal" id="songModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="song-info">
+                    <div class="song-meta">
+                        <span class="artist" id="modalArtist"></span>
+                        <span class="key" id="modalKey"></span>
+                    </div>
+                </div>
+                <div class="song-content">
+                    <div class="chords-section">
+                        <h4>Chords</h4>
+                        <div class="chords" id="modalChords"></div>
+                    </div>
+                    <div class="lyrics-section">
+                        <h4>Lyrics</h4>
+                        <div class="lyrics" id="modalLyrics"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Campfire Songs. Made with <i class="fas fa-heart"></i> for music lovers.</p>
+        </div>
+    </footer>
+
+    <!-- Song data files -->
+    <script src="thursday.js"></script>
+    <script src="friday.js"></script>
+    <script src="saturday.js"></script>
+    <script src="sunday.js"></script>
+    <script src="kids.js"></script>
+    
+    <!-- Main application script -->
+    <script src="script.js"></script>
+</body>
+</html>

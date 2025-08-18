@@ -8,8 +8,8 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
+    color: #e0e0e0;
+    background: #1a1a1a;
     min-height: 100vh;
 }
 
@@ -21,13 +21,13 @@ body {
 
 /* Header */
 .header {
-    background: white;
+    background: #2d2d2d;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .header .container {
@@ -60,7 +60,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: #e0e0e0;
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 0.5rem 1rem;
@@ -73,7 +73,7 @@ body {
 
 .nav-link:hover {
     color: #e74c3c;
-    background: #f8f9fa;
+    background: #3a3a3a;
 }
 
 .nav-link.active {
@@ -90,10 +90,10 @@ body {
 /* Home Section */
 .home-section {
     padding: 100px 0 60px;
-    background: white;
+    background: #2d2d2d;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Days Grid */
@@ -104,10 +104,10 @@ body {
 }
 
 .day-card {
-    background: white;
+    background: #3a3a3a;
     border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
@@ -117,19 +117,19 @@ body {
 
 .day-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     border-color: #e74c3c;
 }
 
 .day-card h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #333;
+    color: #e0e0e0;
     margin-bottom: 0.5rem;
 }
 
 .day-card p {
-    color: #666;
+    color: #b0b0b0;
     font-size: 0.9rem;
     line-height: 1.5;
 }
@@ -137,10 +137,59 @@ body {
 /* Songs Section */
 .songs-section {
     padding: 100px 0 60px;
-    background: white;
+    background: #2d2d2d;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.day-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e74c3c;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    border: 2px solid #444;
+    border-radius: 25px;
+    background: #3a3a3a;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #e74c3c;
+    background: #444;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.1rem;
 }
 
 /* Songs Grid */
@@ -151,10 +200,10 @@ body {
 }
 
 .song-card {
-    background: white;
+    background: #3a3a3a;
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid transparent;
@@ -162,19 +211,19 @@ body {
 
 .song-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     border-color: #e74c3c;
 }
 
 .song-title {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #333;
+    color: #e0e0e0;
     margin-bottom: 0.5rem;
 }
 
 .song-artist {
-    color: #666;
+    color: #b0b0b0;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
@@ -192,9 +241,9 @@ body {
 .song-preview {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #444;
     font-size: 0.9rem;
-    color: #666;
+    color: #b0b0b0;
     line-height: 1.5;
 }
 
@@ -218,7 +267,7 @@ body {
 }
 
 .modal-content {
-    background: white;
+    background: #1a1a1a;
     width: 100%;
     height: 100vh;
     overflow-y: auto;
@@ -230,10 +279,10 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding: 1.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #444;
     position: sticky;
     top: 0;
-    background: white;
+    background: #1a1a1a;
 }
 
 .modal-title-section {
@@ -247,7 +296,7 @@ body {
 .modal-header h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #333;
+    color: #e0e0e0;
 }
 
 .modal-close {
@@ -255,15 +304,15 @@ body {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #666;
+    color: #b0b0b0;
     padding: 0.5rem;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
 .modal-close:hover {
-    background: #f0f0f0;
-    color: #333;
+    background: #3a3a3a;
+    color: #e0e0e0;
 }
 
 .modal-body {
@@ -284,7 +333,7 @@ body {
 .artist, .key {
     border-radius: 15px;
     font-size: 0.9rem;
-    color: #666;
+    color: #b0b0b0;
 }
 
 .key {
@@ -306,7 +355,7 @@ body {
 .chords-section h4, .lyrics-section h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #333;
+    color: #e0e0e0;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -325,11 +374,13 @@ body {
     font-family: 'Courier New', monospace;
     line-height: 1.8;
     white-space: pre-wrap;
+    color: #e0e0e0;
 }
 
 .lyrics {
     line-height: 1.8;
     white-space: pre-wrap;
+    color: #e0e0e0;
 }
 
 /* Responsive Design */
@@ -367,7 +418,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #2d2d2d;
     border-radius: 10px;
 }
 

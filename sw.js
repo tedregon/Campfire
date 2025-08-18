@@ -2,10 +2,7 @@ const CACHE_NAME = 'campfire-songs-v1';
 const urlsToCache = [
   './',
   './index.html',
-  './thursday.html',
-  './friday.html',
-  './saturday.html',
-  './sunday.html',
+  './songs.html',
   './kids.html',
   './styles.css',
   './script.js',

@@ -46,42 +46,32 @@ function createSongCard(song) {
     return card;
 }
 
+// Global variable to store all songs for search functionality
+let allSongs = [];
+
 // Load songs for each section
 function loadSongs() {
     // Check which page we're on and load appropriate songs
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
-    if (currentPage === 'thursday.html') {
-        // Thursday songs
-        const thursdayContainer = document.getElementById('thursdaySongs');
-        if (thursdayContainer) {
-            thursdaySongs.forEach(song => {
-                thursdayContainer.appendChild(createSongCard(song));
+    if (currentPage === 'songs.html') {
+        // All adult songs
+        const allSongsContainer = document.getElementById('allSongs');
+        if (allSongsContainer) {
+            // Combine all adult songs from different days
+            allSongs = [
+                ...thursdaySongs,
+                ...fridaySongs,
+                ...saturdaySongs,
+                ...sundaySongs
+            ];
+            
+            allSongs.forEach(song => {
+                allSongsContainer.appendChild(createSongCard(song));
             });
-        }
-    } else if (currentPage === 'friday.html') {
-        // Friday songs
-        const fridayContainer = document.getElementById('fridaySongs');
-        if (fridayContainer) {
-            fridaySongs.forEach(song => {
-                fridayContainer.appendChild(createSongCard(song));
-            });
-        }
-    } else if (currentPage === 'saturday.html') {
-        // Saturday songs
-        const saturdayContainer = document.getElementById('saturdaySongs');
-        if (saturdayContainer) {
-            saturdaySongs.forEach(song => {
-                saturdayContainer.appendChild(createSongCard(song));
-            });
-        }
-    } else if (currentPage === 'sunday.html') {
-        // Sunday songs
-        const sundayContainer = document.getElementById('sundaySongs');
-        if (sundayContainer) {
-            sundaySongs.forEach(song => {
-                sundayContainer.appendChild(createSongCard(song));
-            });
+            
+            // Initialize search functionality
+            initializeSearch();
         }
     } else if (currentPage === 'kids.html') {
         // Kids songs
@@ -92,6 +82,35 @@ function loadSongs() {
             });
         }
     }
+}
+
+// Search functionality
+function initializeSearch() {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', filterSongs);
+    }
+}
+
+function filterSongs() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const allSongsContainer = document.getElementById('allSongs');
+    
+    if (!allSongsContainer) return;
+    
+    // Clear current songs
+    allSongsContainer.innerHTML = '';
+    
+    // Filter songs based on search term
+    const filteredSongs = allSongs.filter(song => 
+        song.title.toLowerCase().includes(searchTerm) ||
+        song.artist.toLowerCase().includes(searchTerm)
+    );
+    
+    // Display filtered songs
+    filteredSongs.forEach(song => {
+        allSongsContainer.appendChild(createSongCard(song));
+    });
 }
 
 // Initialize the app

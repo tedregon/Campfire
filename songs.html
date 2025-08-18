@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Songs - Campfire Songs</title>
+    <title>Songs - Campfire Songs</title>
     
     <!-- PWA Meta Tags -->
     <meta name="description" content="A collection of campfire songs with chords for guitar players">
@@ -30,19 +30,25 @@
             <nav class="nav">
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="songs.html" class="nav-link">Songs</a></li>
-                    <li><a href="kids.html" class="nav-link active">Kids</a></li>
+                    <li><a href="songs.html" class="nav-link active">Songs</a></li>
+                    <li><a href="kids.html" class="nav-link">Kids</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Kids Songs -->
+        <!-- All Songs -->
         <section class="songs-section">
             <div class="container">
-                <div class="songs-grid" id="kidsSongs">
-                    <!-- Kids songs will be loaded here -->
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search songs or artists...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                
+                <div class="songs-grid" id="allSongs">
+                    <!-- All songs will be loaded here -->
                 </div>
             </div>
         </section>
@@ -71,7 +77,10 @@
     </div>
 
     <!-- Song data files -->
-    <script src="kids.js"></script>
+    <script src="thursday.js"></script>
+    <script src="friday.js"></script>
+    <script src="saturday.js"></script>
+    <script src="sunday.js"></script>
     
     <!-- Main application script -->
     <script src="script.js"></script>

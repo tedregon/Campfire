@@ -4,7 +4,7 @@
   "description": "A collection of campfire songs with chords for guitar players",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#1a1a1a",
   "theme_color": "#e74c3c",
   "orientation": "portrait-primary",
   "icons": [

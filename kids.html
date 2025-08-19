@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="image/icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="image/icon-192x192.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -41,6 +41,12 @@
         <!-- Kids Songs -->
         <section class="songs-section">
             <div class="container">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search kids songs or artists...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                
                 <div class="songs-grid" id="kidsSongs">
                     <!-- Kids songs will be loaded here -->
                 </div>
@@ -55,6 +61,9 @@
                 <div class="modal-title-section">
                     <h3 id="modalTitle"></h3>
                     <div class="artist" id="modalArtist"></div>
+                    <a href="#" id="ultimateGuitarLink" class="ultimate-guitar-link" target="_blank" rel="noopener noreferrer">
+                        Chords on Ultimate Guitar
+                    </a>
                 </div>
                 <button class="modal-close" id="modalClose">
                     <i class="fas fa-times"></i>

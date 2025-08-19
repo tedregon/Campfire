@@ -225,7 +225,21 @@ body {
 .song-artist {
     color: #b0b0b0;
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+}
+
+.ultimate-guitar-link {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.ultimate-guitar-link:hover {
+    color: #c0392b;
+    text-decoration: underline;
 }
 
 .song-key {
@@ -371,7 +385,7 @@ body {
 }
 
 .chords {
-    font-family: 'Courier New', monospace;
+    font-family: 'Roboto Mono', monospace;
     line-height: 1.8;
     white-space: pre-wrap;
     color: #e0e0e0;

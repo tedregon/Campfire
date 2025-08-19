@@ -3137,35 +3137,180 @@ Save tonight`,
 },
 
 
-//{
-//     title: "Song Title",
-//     artist: "Artist Name",
-//     chords: `
-// 
-// [Verse]
-// Am    C    G    F
-// Am    C    G    F
-// 
-// [Chorus]
-// F    C    G    Am
-// F    C    G    Am`,
-//     ultimateGuitarLink: "https://www.ultimate-guitar.com/your-specific-link"
-// },
+{
+    title: "Karma Police",
+    artist: "Radiohead",
+    chords: `No capo
 
-//{
-//     title: "Song Title",
-//     artist: "Artist Name",
-//     chords: `
-// 
-// [Verse]
-// Am    C    G    F
-// Am    C    G    F
-// 
-// [Chorus]
-// F    C    G    Am
-// F    C    G    Am`,
-//     ultimateGuitarLink: "https://www.ultimate-guitar.com/your-specific-link"
-// },
+[Intro]
+| Am    D/F#  | Em     G     |
+| Am    Fadd9 | Em     G     |
+| Am    D     | G D/F# C  Bm |
+| Am          | Bm     D     |
+ 
+[Verse 1]
+Am     D/F# Em     G          Am
+   Karma Police, arrest this man
+    Fadd9    Em       G               Am
+He talks in maths, he buzzes like a fridge
+      D      G D/F#  C   Bm   Am    Bm  D
+He's like a detuned ra - di - o
+ 
+[Verse 2]
+Am     D/F# Em     G          Am
+   Karma Police, arrest this girl
+     Fadd9  Em       G               Am
+Her Hitler hairdo is making me feel ill
+     D        G      D/F# C  Bm   Am    Bm  D
+And we have crashed her  party - y
+ 
+[Chorus]
+C         D           G   F#7
+  This is what you'll get
+C         D           G   F#7
+  This is what you'll get
+C         D           G
+  This is what you'll get
+         Bm        C    Bm  D
+When you mess with us
+ 
+[Verse 3]
+Am     D/F# Em        G            Am
+   Karma Police, I've given all I can
+      Fadd9 Em        G            Am
+It's not enough, I've given all I can
+      D          G D/F# C  Bm   Am    Bm  D
+But we're still on the payro - oll
+ 
+[Chorus]
+C         D           G   F#7
+  This is what you'll get
+C         D           G   F#7
+  This is what you'll get
+C         D           G
+  This is what you'll get
+         Bm        C    Bm  D
+When you mess with us
+ 
+[Bridge]
+Bm       D      G
+   For a minute there
+  D      G       D      Eadd9  E7
+I lost myself, I lost myself
+Bm           D      G
+ Phew, for a minute there
+  D      G       D      Eadd9  E7
+I lost myself, I lost myself
+ 
+[Instrumental]
+| Bm D | G  D  |
+| G  D | E7 E7 |
+ 
+[Bridge]
+Bm       D      G
+   For a minute there
+  D      G       D      Eadd9  E7
+I lost myself, I lost myself
+Bm           D      G
+ Phew, for a minute there
+  D      G       D      Eadd9  E7
+I lost myself, I lost myself
+ 
+[Outro]
+| Bm D | G    D   |
+| G  D | Eadd9 E7 |
+(x3)`,
+    ultimateGuitarLink: "https://tabs.ultimate-guitar.com/tab/radiohead/karma-police-chords-103398"
+},
+
+{
+    title: "Volcano",
+    artist: "Damien Rice",
+    chords: `No capo
+
+[Intro]
+ 
+Am      Am     Am     Am   G
+F       F      F      F    G
+ 
+ 
+[Verse]
+ 
+Am      Am          Am                Am  G
+  Don't hold yourself like that
+F       F              F      F   G
+  You'll hurt your knees
+Am      Am     Am            Am   G
+  I kissed your mouth and back
+F       F         F      F
+  That's all I need
+ 
+G       G            F          F
+  Don't build your world around
+G    G          F         F N.C.
+  Volcanoes melt you down
+ 
+ 
+[Chorus]
+ 
+       Am       Am       F     F
+What I am to you, is not real
+       Am       Am           F     F
+What I am to you, you do not need
+       Am       Am                F        F
+What I am to you, is not what you mean to me
+            Am        Am                      F        F
+You give me miles and miles of mountains, and I ask for the sea
+ 
+ 
+[Verse]
+ 
+Am      Am          Am                Am  G
+Don't throw yourself like that
+F       F              F      F   G
+In front of me
+Am      Am     Am            Am   G
+I kissed your mouth your back
+F       F         F      F
+Is that all you need?
+G       G            F          F
+Don't drag my love around
+G    G          F         F N.C.
+Volcanoes melt me down
+ 
+ 
+[Chorus]
+ 
+       Am       Am       F     F
+What I am to you, is not real
+       Am       Am           F     F
+What I am to you, you do not need
+       Am       Am                F        F
+What I am to you, is not what you mean to me
+            Am        Am                      F        F
+You give me miles and miles of mountains, and I ask for the sea
+ 
+ 
+[Bridge]
+ 
+           C
+for what I give to you
+                 E7
+Is just what i'm going through
+              Am
+This is nothing new
+                 F
+No no just another phase of finding
+           C
+what I really need
+        E7
+Is what makes me bleed
+           Am
+And like a new disease
+            F
+Lord, she's still too young to treat`,
+    ultimateGuitarLink: "https://tabs.ultimate-guitar.com/tab/damien-rice/volcano-chords-149324"
+},
 
 //{
 //     title: "Song Title",

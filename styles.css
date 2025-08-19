@@ -134,6 +134,31 @@ body {
     line-height: 1.5;
 }
 
+/* QR Code Section */
+.qr-section {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+.qr-code {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    background: white;
+}
+
+.qr-text {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
 /* Songs Section */
 .songs-section {
     padding: 100px 0 60px;
